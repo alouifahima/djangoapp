@@ -17,6 +17,7 @@ class Machine_virtuelle(models.Model):
 class Abonnement(models.Model):
     user   = models.ForeignKey(User, on_delete=models.CASCADE)
     type_Abonnement = models.CharField(max_length=200)
+    price = models.FloatField(default=0)
     date_joind = models.DateTimeField(auto_now=True)
     def __str__(self):
         return str(self.user)
